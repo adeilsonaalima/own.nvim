@@ -18,35 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.g.opts = {
-	config = {
-		colorscheme = function()
-			require('catppuccin').load()
-		end,
-		icons = {
-			misc = {
-				dots = "󰇘",
-			},
-			ft = {
-				octo = "",
-			},
-			dap = {
-				Stopped             = { "󰁕 ", "DiagnosticWarn", "DapStoppedLine" },
-				Breakpoint          = " ",
-				BreakpointCondition = " ",
-				BreakpointRejected  = { " ", "DiagnosticError" },
-				LogPoint            = ".>",
-			},
-			diagnostics = {
-				Error = " ",
-				Warn  = " ",
-				Hint  = " ",
-				Info  = " ",
-			},
-		}
-	}
-}
-
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
